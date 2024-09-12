@@ -1,3 +1,7 @@
+let stopinter;
+if (mobile) { stopinter = 0.07; }
+else { stopinter = 0.01; }
+
 function nada(fr) {
     const audio = new ( window.AudioContext || window.webkitAudioContext )();
     const osc =  audio.createOscillator();
@@ -510,12 +514,12 @@ $('.piano').on('touchend', function (e) {
 
 
 
-$(document).keydown(function (e) { 
-    console.log(e.key);
-});
-$(document).keyup(function (e) { 
-    console.log(e.key);
-});
+// $(document).keydown(function (e) { 
+//     console.log(e.key);
+// });
+// $(document).keyup(function (e) { 
+//     console.log(e.key);
+// });
 
 
 

@@ -29,6 +29,13 @@ $('.full').click(function (e) {
     openFullscreen();
 });
 
+let sekalifull = true;
+$(document).keydown(function (e) {
+    if (e.key == 'Enter' && sekalifull) {
+        openFullscreen();
+        sekalifull = false;
+    }
+}).keyup((e)=>{if (e.key == 'Enter') sekalifull = true;});
 
 
 document.addEventListener('fullscreenchange', (e) => {
@@ -43,6 +50,6 @@ document.addEventListener('fullscreenchange', (e) => {
 
 
 
-let stopinter;
-if (mobile) { stopinter = 0.07; }
-else { stopinter = 0.01; }
+
+
+
